@@ -6,52 +6,57 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 body {
-    background: #111111;
+    background: #360c0c;
     color: #ffffff;
 }
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #D72323;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100%;
 }
-
+/* LOGO */
 .logo {
-    font-size: 25px;
-    color: #000000;
+    font-size: 28px;
+    color: #D72323;
     text-decoration: none;
     font-weight: 900;
 }
+.logo :hover {
+    color: #f0e7e7;
+}
+
+/* NAVIGATION */
 .navbar a{
     font-size: 18px;
-    color: #000000;
+    color: #D72323;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
     transition: .5s;
 }
-
-.navbar a:hover,
-.navbar a.active {
+.navbar a:hover {
     color: #fcf9f9;
 }
 
+
+
+/* ABOUT SECTIONN */
 .home {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
+    background: url('homebackground.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-
 .home-content {
     max-width: 680px;
 }
@@ -60,7 +65,6 @@ body {
     max-width: 680px;
     color: #ffffff;
     line-height: 1;
-
 }
 .home-content h3 {
     font-size: 32px;
@@ -72,7 +76,6 @@ body {
     color: #ffffff;
     margin: 20px 0 40px;
 }
-
 .home-content .btn-box {
     width: 345px;
     height: 50px;
@@ -80,7 +83,6 @@ body {
     justify-content: space-between;
     
 }
-
 .btn-box a {
     position: relative;
     display: inline-flex;
@@ -97,9 +99,9 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    overflow: hidden;
 
 }
-
 .btn-box a:nth-last-child(1){
     background: transparent;
     color: #ffffff;
@@ -110,12 +112,133 @@ body {
     border-radius: 100px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
     background: #020101;
     z-index: -1;
     transition: .5s;
 }
-.btn-box a:hover:before{
+.btn-box a:hover::before{
     width: 100%;
+}
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+   
+    
+}
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #D72323;
+    border-radius: 100%;
+    font-size: 20px;
+    color: #f0e7e7;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fd0202;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+  /* ABOUT SECTIONN */
+.about {
+    height: 100vh;
+    display: flex;
+    background: #522626;
+    align-items: center;
+    padding: 0 10%;
+    background-size: cover;
+    background-position: center;
+}
+.about-content h1 {
+    position: relative;
+    font-size: 53px;   
+    max-width: 680px;
+    transform: translate(-10%, -200%);
+    color: #ffffff;
+    
+}
+
+th {
+    width: 1110px;
+    font-size: 50px;
+    color: #D72323;
+    
+}
+.about-content p {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 20px 0 40px;
+}
+.about-content{
+    max-width: 680px;
+}
+
+/* CONTACT SECTIONN */
+.contact {
+    height: 100vh;
+    display: flex;
+    background: #c7a3a3;
+    align-items: center;
+    padding: 0 10%;
+    background-size: cover;
+    background-position: center;
+}
+.contact-content h1 {
+    position: relative;
+    font-size: 53px;   
+    max-width: 680px;
+    transform: translate(-10%, -250%);
+    color: #ffffff;
+    
+}
+
+table {
+    width: 200%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    
+}
+
+.contact-content p {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 20px 0 40px;
+}
+.contact-content{
+    max-width: 680px;
+}
+td { 
+    width: 1000px;
+    font-size: 26px;
 }
